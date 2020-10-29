@@ -21,7 +21,7 @@
         <div class="date-select col-12">
           <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
-          <%= link_to "新規タスク作成", "#" ,class:"new-task-btn"%>
+          <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
         </div>
       </div>
     <%end%>

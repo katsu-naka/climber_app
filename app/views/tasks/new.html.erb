@@ -1,0 +1,11 @@
+<h1>新規タスク作成</h1>
+
+<%= form_with model:@task, locals: true do |f| %>
+  <%= f.date_field :date, value: Time.now.strftime("%Y-%m-%d"),class:"new-task-day" %>
+  <%= f.text_field :title, placeholder: "タイトル",class:"new-task-title"%>
+  <%= f.text_area :text, placeholder: "本文", class:"new-task-show" %>
+  <%= f.hidden_field :done ,:value => 1 %>
+  <%= f.submit "投稿" ,class:'new-submit-btn'%>
+<% end %>
+
+<%= link_to "タスクボードに戻る", root_path, class:"root-link-btn"%>
