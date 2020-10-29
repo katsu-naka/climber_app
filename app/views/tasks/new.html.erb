@@ -1,0 +1,32 @@
+<div class=header-menu1>
+  <div class="header1-title">
+    <p>新規タスク作成</p>
+  </div>
+</div>
+<div class="new-task-field">
+  <div class="container-fliud">
+    <div class="row">
+      <div class="new-task-form col-8 offset-2">
+        <%= form_with model:@task, locals: true do |f| %>
+          <div class="mt-5">
+          <%= f.label :date,"日付を選択：", class:"date-form-label" %>
+          <%= f.date_field :date, value: Time.now.strftime("%Y-%m-%d"),class:"date-form" %>
+          </div>
+        <div class="mt-3">
+          <%= f.text_field :title, placeholder: "タイトル",class:"title-form"%>
+        </div>
+        <div>
+          <%= f.text_area :text, placeholder: "本文", class:"text-form" %>
+        </div>
+          <%= f.hidden_field :done ,:value => 1 %>
+        <div class="mt-3">
+          <%= f.submit "投稿" ,class:'new-submit-btn'%>
+        </div>
+        <div class="mt-5">
+          <%= link_to "タスクボードに戻る", root_path, class:"root-link"%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :tasks
+
   NAME_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/.freeze
 
   with_options presence: true do

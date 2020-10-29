@@ -1,6 +1,9 @@
 .header-bar{
-  background-color: #001b40;
   height: 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #001b40;
 }
 
 .climber-logo{
