@@ -1,0 +1,22 @@
+<%#未ログイン時の画面%>
+<div class="container-fulid infomation-main">
+  <div class="row info-area">
+      <%#アプリタイトル・紹介%>
+      <div class="info-box col-4 offset-2">
+        <%= image_tag 'climber-entrance-logo.png', class:"infomation-app-logo col-12"%>
+        <div class="app-concept ml-3 mt-4">
+          <p>仲間と共に「高み」を目指す</p>
+        </div>
+        <div class="app-description ml-3 mt-4">
+          <p>Climberは、プロジェクトメンバーのタスク情報・進捗状況を共有あなたのビジネスをサポートします。</p>
+        </div>
+      </div>
+      <%#新規登録・ログイン%>
+      <div class="account-box col-4">
+        <p>アカウントをお持ちの方</p>
+          <%= link_to "ログイン", "#", class:"sign-in" %>
+        <p>アカウントをお持ちでない方</p>
+          <%= link_to "新規登録", "#", class:"sign-up" %>
+      </div>
+  </div>
+</div>

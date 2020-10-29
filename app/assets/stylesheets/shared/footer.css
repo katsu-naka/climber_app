@@ -1,0 +1,12 @@
+.footer{
+  height: 40px;
+  width: 100%;
+  background-color: #001b40;
+}
+
+.copy-righat{
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+}
