@@ -5,7 +5,7 @@ main{
   overflow: scroll;
   background-image: image-url('main-background-image.png');
   background-size: cover;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.5);
   background-blend-mode: lighten;
 }
 
@@ -28,7 +28,7 @@ main{
 }
 
 // header1
-.user-name-box{
+.header1-title{
   color: #fff;
   font-size: 18px;
   padding: 10px;
