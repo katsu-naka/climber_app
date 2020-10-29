@@ -1,11 +1,29 @@
 
 main{
-  height: 100％;
+  height: 100vh;
   width: 100%;
+  overflow: scroll;
+  background-image: image-url('main-background-image.png');
+  background-size: cover;
+  background-color: rgba(255,255,255,0.7);
+  background-blend-mode: lighten;
 }
 
-.header-menu{
+.header-menu1{
+  width: 100%;
   height: 50px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 40px;
+  background-color: #053980;
+}
+
+.header-menu2{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 90px;
   background-color: #053980;
 }
 
@@ -28,7 +46,6 @@ main{
 }
 
 // header2
-
 .date-select{
   padding: 10px;
 }
@@ -44,13 +61,48 @@ main{
   margin-left: 10px;
 }
 
-
 // task-main
-
 .task-field{
-  height: 100vh;
-  background-image: image-url('main-background-image.png');
-  background-size: cover;
-  background-color: rgba(255,255,255,0.7);
-  background-blend-mode: lighten;
+  padding-top: 140px;
+  padding-bottom: 40px;
 }
+
+.task-list{
+  height: 60px;
+  background-color: #fff;
+  border-radius:5px;
+}
+
+.task-title{
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin: auto 0;
+}
+
+.link-btn{
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;;
+}
+
+.show-btn{
+  color: #053980;
+  font-weight: bold;
+}
+
+.delete-btn{
+  color: #ff5757;
+  font-weight: bold;
+}
+
+.done1-btn{
+  background-color: #ff5757;
+  color: #fff;
+}
+
+.done0-btn{
+  background-color: #053980;
+  color: #fff;
+}
+

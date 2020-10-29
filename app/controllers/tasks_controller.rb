@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   def index
+    @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC")  
   end
 
   def new
