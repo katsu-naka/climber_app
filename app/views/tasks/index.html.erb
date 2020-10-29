@@ -1,5 +1,36 @@
 <main>
+  <% unless user_signed_in? %>
+    <%= render partial: 'infomation' %>
+  <% end %>
 
-<%= render partial: 'infomation' %>
+  <div class="container-fluid">
+  <%# header 1 %>
+    <div class="header-menu row">
+      <div class="user-name-box col-6">
+        <P><%= "#"%>さんのタスクボード</p>
+      </div>
+      <div class="sign-out-box col-6">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class:"sign-out-btn" %>
+      </div>
+    </div>
+
+  <%# header2 %>
+  <%= form_with model:@task, locals: true do |f| %> 
+    <div class="header-menu row">
+      <div class="date-select col-12">
+        <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
+        <%= f.submit "表示" %>
+        <%= link_to "新規タスク作成", "#" ,class:"new-task-btn"%>
+      </div>
+    </div>
+  <%end%>
+
+  <%# タスク表示画面 %>
+
+  <div class="task-field row">
+    <div class="task-lists col-12">
+
+    </div>  
+  </div>
 
 </main>

@@ -1,13 +1,56 @@
 
 main{
-  height: 100%;
+  height: 100％;
   width: 100%;
 }
 
-.user_name{
-  background-color: aqua;
+.header-menu{
+  height: 50px;
+  background-color: #053980;
 }
 
-.gest_name{
-  background-color: pink;
+// header1
+.user-name-box{
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.sign-out-btn{
+  float: right;
+  text-decoration: none;
+  color: #053980;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+// header2
+
+.date-select{
+  padding: 10px;
+}
+
+.new-task-btn{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  background-color: #ff5757;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+
+// task-main
+
+.task-field{
+  height: 100vh;
+  background-image: image-url('main-background-image.png');
+  background-size: cover;
+  background-color: rgba(255,255,255,0.7);
+  background-blend-mode: lighten;
 }
