@@ -14,9 +14,9 @@
       <%#新規登録・ログイン%>
       <div class="account-box col-4">
         <p>アカウントをお持ちの方</p>
-          <%= link_to "ログイン", "#", class:"sign-in" %>
+          <%= link_to "ログイン", new_user_session_path , class:"sign-in" %>
         <p>アカウントをお持ちでない方</p>
-          <%= link_to "新規登録", "#", class:"sign-up" %>
+          <%= link_to "新規登録", new_user_registration_path, class:"sign-up" %>
       </div>
   </div>
 </div>
