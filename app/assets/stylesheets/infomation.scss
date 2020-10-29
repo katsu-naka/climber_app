@@ -1,0 +1,53 @@
+.infomation-main{
+  height: 100%;
+  background-image: image-url('entrance-background-image.png');
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+}
+
+.info-area{
+  height: 100%;
+}
+
+.info-box{
+  margin-top: 200px;
+}
+
+.app-concept{
+  color: #fff;
+  font-size: 20px;
+}
+
+.app-description{
+  color: #fff;
+  font-size: 18px;
+}
+
+.account-box{
+  text-align: center;
+  margin-top: 200px;
+}
+
+.account-box p{
+  color: #fff;
+  font-size: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+} 
+
+.sign-in{
+  color: #fff;
+  background-color: #053980;
+  text-decoration: none;
+  padding: 20px 150px;
+  border-radius: 5px;
+}
+
+.sign-up{
+  color: #053980;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 20px 150px;
+  border-radius: 5px;
+}
