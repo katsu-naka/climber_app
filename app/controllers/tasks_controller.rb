@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [:show, :destroy]
+
   def index
     @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC")  
   end
@@ -17,13 +19,43 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
   end
+
+  def edit
+    if @task.user == current_user
+      render 'edit'
+    else
+      redirect_to action: :index
+    end
+  end
+
+  def update
+    if @task.update(task_params)
+      redirect_to task_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @task.user_id == current_user.id
+      @task.destroy
+      redirect_to root_path
+    else
+      redirect_to action: :index
+    end
+  end
+
 
   private
 
+  
   def task_params
     params.require(:task).permit(:title, :text, :date ,:done).merge(user_id: current_user.id)
+  end
+  
+  def set_task
+    @task = Task.find(params[:id])
   end
 
 end
