@@ -10,3 +10,16 @@
   width: 120px;
   margin-left: 10px;
 }
+
+.user-status{
+  float: right;
+  line-height: 40px;
+  color: #fff;
+  font-size: 15px;
+  margin-right: 25px;
+}
+
+.user-status a{
+  text-decoration: none;
+  color: #fff;
+}
