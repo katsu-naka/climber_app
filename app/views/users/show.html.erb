@@ -1,0 +1,64 @@
+<main>
+
+  <% unless user_signed_in? %>
+    <%= render partial: 'infomation' %>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <div class="container-fluid">
+    <%# header 1 %>
+      <div class="header-menu1 row">
+        <div class="header1-title col-3">
+          <P><%= @name %>さんのタスクボード</p>
+        </div>
+
+        <%#テスト中！！！！！！！%>
+        <div class="header1-title col-3">
+          <P><%= link_to "プロジェクト選択",projects_path %></p>
+        </div>
+
+        <div class="sign-out-box col-6">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class:"sign-out-btn" %>
+        </div>
+      </div>
+    <%# header2 %>
+    <%= form_with model:@task, locals: true do |f| %> 
+      <div class="header-menu2 row">
+        <div class="date-select col-12">
+          <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
+          <%= f.submit "表示" %>
+          <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
+        </div>
+      </div>
+    <%end%>
+    <%# タスク表示画面 %>
+    <div class="task-field row">
+      <div class="task-lists col-sm-7 ml-auto mr-auto">
+        <% @tasks.each do |task|%>
+          <div class="task-list row mt-5 mb-5">
+            <div class="task-title col-8">
+              <%= task.title %>
+            </div>
+            <div class="col-4 d-flex justify-content-around align-items-center">
+              <div class="show-link">
+                <%= link_to "詳細", task_path(task.id), class:"show-link" %>
+              </div>
+              <div class="delete-link">
+                <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
+              </div>
+              <div class="done-link">
+                <% if task.done == 1 %>
+                  <%= link_to "完了", "#", method: :post ,class:"done1-btn link-btn"%>
+                <% end %>
+                <% if task.done != 1 %>
+                  <%= link_to "完了済", "#",method: :post ,class:"done0-btn link-btn"%>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <%end%>
+      </div>  
+    </div>
+  <% end %>
+
+</main>

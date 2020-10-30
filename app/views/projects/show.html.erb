@@ -1,0 +1,16 @@
+<h1>プロジェクト概要</p>
+<div>
+  <p>プロジェクト名</p>
+  <p><%= @project.project_name %></p>
+</div>
+
+<div>
+  <p>プロジェクトメンバー</p>
+  <p>プロジェクトメンバーを表示させる</p>
+  <% @project.users.pluck(:name ,:user_id).each do |name,id| %>
+    <div>
+    <%= name %>
+    <%= link_to "タスク管理画面へ", user_path(id) %>
+    </div>
+  <% end %>
+</div>
