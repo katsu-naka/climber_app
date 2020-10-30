@@ -56,10 +56,10 @@ has_many :users
 
 ## project_userテーブル
 
-| Column  | Type       | Options                       |
-| ------- | ---------- | ----------------------------- |
-| project | references | null false, foreign_key: true |
-| user    | references | null false, foreign_key: true |
+| Column  | Type       | Options           |
+| ------- | ---------- | ----------------- |
+| project | references | foreign_key: true |
+| user    | references | foreign_key: true |
 
 ### Association
 
