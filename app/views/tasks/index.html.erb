@@ -35,10 +35,10 @@
             </div>
             <div class="col-4 d-flex justify-content-around align-items-center">
               <div class="show-link">
-                <%= link_to "詳細", task_path(task.id), class:"show-btn" %>
+                <%= link_to "詳細", task_path(task.id), class:"show-link" %>
               </div>
               <div class="delete-link">
-                <%= link_to "削除", "#", class:"delete-btn"%>
+                <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
               </div>
               <div class="done-link">
                 <% if task.done == 1 %>
