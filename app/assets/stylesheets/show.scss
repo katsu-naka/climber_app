@@ -1,0 +1,65 @@
+// ヘッダーのCSSはtasls.scssに記述
+
+.show-task-field{
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  background-image: image-url('main-background-image.png');
+  background-size: cover;
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: lighten;
+}
+
+.show-task-contents{
+  height: 100％;
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+.show-task-area{
+  height: 90%;
+  background-color: #fff;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.date-name{
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+}
+
+.show-date{
+  float: left;
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.show-user-name{
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.show-task-title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.show-task-text{
+  height: 70%;
+  width: 100%;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+// コメント
+.comments-area{
+  height: 90%;
+  background-color: #ccc;
+  opacity: 0.8;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
