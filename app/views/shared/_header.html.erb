@@ -1,3 +1,11 @@
 <header class="header-bar">
   <%= link_to image_tag("climber_logo_image.png", class:"climber-logo"), "/" %>
+
+  <div class="user-status">
+    <% if user_signed_in?%>
+      <p><%= current_user.name %>さん ログイン中</p>
+    <% else %>
+      <a><%= link_to "ログインしてプロジェクトに参加する", new_user_session_path %></a>
+    <% end %>
+  </div>
 </header>
