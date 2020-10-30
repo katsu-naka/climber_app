@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tasks
+  has_many :projects , through: :project_users
+  has_many :project_users
+
 
   NAME_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/.freeze
 

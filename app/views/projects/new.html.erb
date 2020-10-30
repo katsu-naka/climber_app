@@ -1,0 +1,15 @@
+<h1>プロジェクト作成</h1>
+
+<%= form_with model:@project, locals: true do |f| %>
+  <%= f.text_field :project_name %>
+
+  <select name="project[user_ids][]">
+  <option value="">プロジェクトメンバーを選択してください</option>
+  <% User.where.not(id:current_user.id).each do |user| %>
+    <option value=<%= user.id %>><%= user.name %></option>
+  <% end %>
+  </select >
+  <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+  <%= f.submit "プロジェクト作成"%>
+<% end %>

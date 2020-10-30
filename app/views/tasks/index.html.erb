@@ -8,9 +8,15 @@
     <div class="container-fluid">
     <%# header 1 %>
       <div class="header-menu1 row">
-        <div class="header1-title col-6">
+        <div class="header1-title col-3">
           <P><%= current_user.name %>さんのタスクボード</p>
         </div>
+
+        <%#テスト中！！！！！！！%>
+        <div class="header1-title col-3">
+          <P><%= link_to "プロジェクト選択",projects_path %></p>
+        </div>
+
         <div class="sign-out-box col-6">
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class:"sign-out-btn" %>
         </div>

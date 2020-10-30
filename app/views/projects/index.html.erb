@@ -1,0 +1,8 @@
+<h1>ルーム選択</h1>
+<%= link_to "プロジェクト作成", new_project_path %>
+
+<% @projects.each do |project|%>
+  <div>
+  <%= link_to "#{project.project_name}", project_path(project.id) %>
+  </div>
+<%end%>
