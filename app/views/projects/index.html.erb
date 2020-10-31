@@ -1,14 +1,26 @@
-<div class="project-index">
 <div class="header-menu1">
-<div class="header1-title">
-<p>ルーム選択</p>
-</div>
-</div>
-<%= link_to "プロジェクト作成", new_project_path %>
-
-<% @projects.each do |project|%>
-  <div>
-  <%= link_to "#{project.project_name}", project_path(project.id) %>
+  <div class="header1-title col-3">
+    <p>マイプロジェクト選択</p>
   </div>
-<%end%>
+</div>
+
+  
+<div class="project-index">
+  <div class="project-field">
+    <div class="project-lists">
+
+      <div class="new-project">
+        <a><%= link_to "プロジェクト作成する", new_project_path, class:"new-project-link" %></a>
+      </div>
+      <div class="project-list">
+        <p>マイプロジェクトリスト</p>
+      <% @projects.each do |project|%>
+        <div>
+          <a><%= link_to "#{project.project_name}", project_path(project.id) %></a>
+        </div>
+      <%end%>
+      </div>
+
+    </div>
+  </div>
 </div>

@@ -25,3 +25,43 @@
   font-size: 18px;
   padding: 10px;
 }
+
+.project-field{
+  height: 100vh;
+  padding-top: 90px;
+}
+
+.project-lists{
+  background-color: #fff;
+  border-radius: 10px;
+  width: 600px;
+  height: 80%;
+  margin: 50px auto;
+}
+
+
+.new-project{
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #ddd;
+}
+
+.new-project-link{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #053980;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.project-list{
+  padding: 10px;
+}
+
+.project-list p{
+  font-size: 18px;
+  color: #053980;
+  font-weight: bold;
+}

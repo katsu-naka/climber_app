@@ -9,7 +9,7 @@
     <%# header 1 %>
       <div class="header-menu1 row">
         <div class="header1-title col-3">
-          <P><%= @name %>さんのタスクボード</p>
+          <P><%= @user.name %>さんのタスクボード</p>
         </div>
 
         <%#テスト中！！！！！！！%>
@@ -27,7 +27,9 @@
         <div class="date-select col-12">
           <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
+          <% if current_user.id == @user.id %>
           <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
+          <% end %>
         </div>
       </div>
     <%end%>
@@ -43,6 +45,8 @@
               <div class="show-link">
                 <%= link_to "詳細", task_path(task.id), class:"show-link" %>
               </div>
+
+            <% if current_user.id == task.user_id %>
               <div class="delete-link">
                 <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
               </div>
@@ -54,6 +58,8 @@
                   <%= link_to "完了済", "#",method: :post ,class:"done0-btn link-btn"%>
                 <% end %>
               </div>
+            <% end %>
+
             </div>
           </div>
         <%end%>
