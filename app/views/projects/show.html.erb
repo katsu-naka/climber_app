@@ -1,0 +1,28 @@
+<%#CSSはapp/assets/stylesheets/projects/projects.scssと共通%>
+
+<div class="header-menu1">
+  <div class="header1-title col-3">
+    <p>プロジェクト概要</p>
+  </div>
+</div>
+
+<div class="project-index">
+  <div class="project-field">
+    <div class="project-lists">
+
+      <div class="project-list">
+        <p>プロジェクト名</p>
+        <p><%= @project.project_name %></p>
+        <div>
+          <p>プロジェクトメンバー</p>
+          <% @project.users.pluck(:name ,:user_id).each do |name,id| %>
+            <div>
+            <a><%= name %><%= link_to "タスク管理画面へ", user_path(id) %></a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

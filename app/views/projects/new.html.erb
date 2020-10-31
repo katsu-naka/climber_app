@@ -1,0 +1,28 @@
+<%#CSSはapp/assets/stylesheets/projects/projects.scssと共通%>
+<div class="header-menu1">
+  <div class="header1-title col-3">
+    <p>プロジェクト作成</p>
+  </div>
+</div>
+
+<div class="project-index">
+  <div class="project-field">
+    <div class="project-lists">
+
+    <%= form_with model:@project, locals: true do |f| %>
+      <%= f.text_field :project_name %>
+
+      <select name="project[user_ids][]">
+      <option value="">プロジェクトメンバーを選択してください</option>
+      <% User.where.not(id:current_user.id).each do |user| %>
+        <option value=<%= user.id %>><%= user.name %></option>
+      <% end %>
+      </select >
+      <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+      <%= f.submit "プロジェクト作成"%>
+    <% end %>
+
+    </div>
+  </div>
+</div>

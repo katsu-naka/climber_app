@@ -1,0 +1,67 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.project-index{
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  background-image: image-url('main-background-image.png');
+  background-size: cover;
+  background-color: rgba(255,255,255,0.3);
+  background-blend-mode: lighten;
+}
+
+.header-menu1{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 40px;
+  background-color: #053980;
+}
+
+.header1-title{
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.project-field{
+  height: 100vh;
+  padding-top: 90px;
+}
+
+.project-lists{
+  background-color: #fff;
+  border-radius: 10px;
+  width: 600px;
+  height: 80%;
+  margin: 50px auto;
+}
+
+
+.new-project{
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #ddd;
+}
+
+.new-project-link{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #053980;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.project-list{
+  padding: 10px;
+}
+
+.project-list p{
+  font-size: 18px;
+  color: #053980;
+  font-weight: bold;
+}

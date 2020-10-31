@@ -1,0 +1,28 @@
+<div class="header-menu1">
+  <div class="header1-title col-3">
+    <p>マイプロジェクト選択</p>
+  </div>
+</div>
+
+  
+<div class="project-index">
+  <div class="project-field">
+    <div class="project-lists">
+
+      <div class="new-project">
+        <a><%= link_to "プロジェクト作成する", new_project_path, class:"new-project-link" %></a>
+      </div>
+      <div class="project-list">
+        <p>マイプロジェクトリスト</p>
+      <% @projects.each do |project|%>
+        <%# current_user.idとprojectユーザーidが一致するものだけ表示したい %>
+        <div>
+          <a><%= link_to "#{project.project_name}", project_path(project.id) %></a>
+        </div>
+        <%#end %>
+      <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
