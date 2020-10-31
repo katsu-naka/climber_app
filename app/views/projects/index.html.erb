@@ -15,10 +15,12 @@
       <div class="project-list">
         <p>マイプロジェクトリスト</p>
       <% @projects.each do |project|%>
+        <%# current_user.idとprojectユーザーidが一致するものだけ表示したい %>
         <div>
           <a><%= link_to "#{project.project_name}", project_path(project.id) %></a>
         </div>
-      <%end%>
+        <%#end %>
+      <% end %>
       </div>
 
     </div>
