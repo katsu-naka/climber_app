@@ -48,10 +48,10 @@
               </div>
               <div class="done-link">
                 <% if task.done == 1 %>
-                  <%= link_to "完了", "#", method: :post ,class:"done1-btn link-btn"%>
+                  <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
                 <% end %>
                 <% if task.done != 1 %>
-                  <%= link_to "完了済", "#",method: :post ,class:"done0-btn link-btn"%>
+                  <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
                 <% end %>
               </div>
             </div>

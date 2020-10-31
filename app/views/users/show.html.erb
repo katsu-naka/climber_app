@@ -45,20 +45,26 @@
               <div class="show-link">
                 <%= link_to "詳細", task_path(task.id), class:"show-link" %>
               </div>
-
+            <%# 自身のタスクのみ操作出来る%>
             <% if current_user.id == task.user_id %>
               <div class="delete-link">
                 <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
               </div>
               <div class="done-link">
                 <% if task.done == 1 %>
-                  <%= link_to "完了", "#", method: :post ,class:"done1-btn link-btn"%>
+                  <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
                 <% end %>
                 <% if task.done != 1 %>
-                  <%= link_to "完了済", "#",method: :post ,class:"done0-btn link-btn"%>
+                  <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
                 <% end %>
               </div>
-            <% end %>
+            <% else %>
+              <div class="done-link">
+                <% if task.done == 0 %>
+                  <p class="done0-btn link-btn">完了済</p>
+                <% end %>
+              </div>
+            <% end%>
 
             </div>
           </div>
