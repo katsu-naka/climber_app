@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   before_action :progress_calc, only: [:index]
 
   def index
-    @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC")  
+    @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC") 
   end
 
   def new

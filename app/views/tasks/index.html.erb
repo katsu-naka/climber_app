@@ -1,3 +1,4 @@
+<%#ログインユーザーのタスク管理ページ%>
 <main>
 
   <% unless user_signed_in? %>
@@ -24,13 +25,13 @@
     <%# header2 %>
     <%= form_with model:@task, locals: true do |f| %> 
       <div class="header-menu2 row">
-        <div class="date-select col-12">
+        <div class="date-select d-flex col-12">
           <div>
           <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
           <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
           </div>
-          <div>
+          <div class="task-status ml-4 mt-1">
           <p>タスク数：<%= @today_tasks %>タスク 完了済：<%= @dones %>タスク 進捗率：<%= @progress %>％</p>
           </div>
         </div>
