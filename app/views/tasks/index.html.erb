@@ -25,9 +25,14 @@
     <%= form_with model:@task, locals: true do |f| %> 
       <div class="header-menu2 row">
         <div class="date-select col-12">
+          <div>
           <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
           <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
+          </div>
+          <div>
+          <p>タスク数：<%= @today_tasks %>タスク 完了済：<%= @dones %>タスク 進捗率：<%= @progress %>％</p>
+          </div>
         </div>
       </div>
     <%end%>
@@ -36,6 +41,8 @@
       <div class="task-lists col-sm-7 ml-auto mr-auto">
         <% @tasks.each do |task|%>
           <div class="task-list row mt-5 mb-5">
+            <div class="tasks-progress">
+            </div>
             <div class="task-title col-8">
               <%= task.title %>
             </div>
