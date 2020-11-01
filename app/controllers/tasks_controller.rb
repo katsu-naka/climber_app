@@ -2,7 +2,14 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC")  
+    @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC") 
+
+    @dones = Task.where(done: 0, date:Date.today,user_id:current_user).length
+    @today_tasks = Task.where(date: Date.today,user_id:current_user).length
+    @progress = 0
+    if @tasks.present?
+      @progress = ((@dones.to_f/@today_tasks.to_f) * 100).to_i
+    end
   end
 
   def new
@@ -44,6 +51,18 @@ class TasksController < ApplicationController
     else
       redirect_to action: :index
     end
+  end
+
+  def done_update
+    @task = Task.find(params[:task_id])
+    @task.update(done: 0)
+    redirect_to action: :index
+  end
+  
+  def done_remove
+    @task = Task.find(params[:task_id])
+    @task.update(done: 1)
+    redirect_to action: :index
   end
 
 
