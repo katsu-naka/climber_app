@@ -1,9 +1,15 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
-  before_action :progress_calc, only: [:index]
 
   def index
     @tasks = Task.where(date: Date.today, user_id: current_user).order("created_at DESC") 
+
+    @dones = Task.where(done: 0, date:Date.today,user_id:current_user).length
+    @today_tasks = Task.where(date: Date.today,user_id:current_user).length
+    @progress = 0
+    if @tasks.present?
+      @progress = ((@dones.to_f/@today_tasks.to_f) * 100).to_i
+    end
   end
 
   def new
@@ -69,12 +75,6 @@ class TasksController < ApplicationController
   
   def set_task
     @task = Task.find(params[:id])
-  end
-
-  def progress_calc
-    @dones = Task.where(done: 0, date:Date.today,user_id:current_user).length
-    @today_tasks = Task.where(date: Date.today,user_id:current_user).length
-    @progress = ((@dones.to_f/@today_tasks.to_f) * 100).floor
   end
 
 end
