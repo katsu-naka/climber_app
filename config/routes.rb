@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   end
   resources :projects
   resources :users, only: [:index, :show]
-  resources :inquiry
+  resources :inquiries
 end

@@ -1,0 +1,9 @@
+<p>お問い合わせフォーム</p>
+
+<%= form_with model:@inquiry, locals: true do |f| %>
+  <%= f.label :name, "件名"%>
+  <%= f.text_field :name, placeholder:"件名を入力してください"%>
+  <%= f.label :text, "お問い合わせ内容"%>
+  <%= f.text_area :text, placeholder:"お問い合わせ内容を入力してください。返信が必要な場合は返信用emailアドレスを入力してください。"%>
+  <%= f.submit "送信する"%>
+<%end%>

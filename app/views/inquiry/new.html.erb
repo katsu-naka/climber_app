@@ -1,7 +1,0 @@
-<p>お問い合わせ</p>
-
-<%= form_with model:@inquily, locals: true do |f| %>
-  <%= f.text_field :name, placeholder: "件名を入力してください"%>
-  <%= f.text_area :text, placeholder: "お問い合わせ内容を入力してください"%>
-  <%= f.submit "送信する" %>
-<% end %>
