@@ -17,6 +17,12 @@
           <%= link_to "ログイン", new_user_session_path , class:"sign-in" %>
         <p>アカウントをお持ちでない方</p>
           <%= link_to "新規登録", new_user_registration_path, class:"sign-up" %>
+        <p>SNSアカウントでログインする</p>
+        <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
+        <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+        <p>SNSアカウントで新規新規登録する</p>
+          <%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post%>
+          <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%>
       </div>
   </div>
 </div>
