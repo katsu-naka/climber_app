@@ -1,3 +1,40 @@
-// Place all the styles related to the inquiries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.inquiry-field{
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  background-color: #ddd;
+}
+
+.inquiry-contents{
+  height: 100%;
+  padding: 90px 20px 40px;
+}
+
+.inquiry-message{
+  margin: 20px 0 0;
+}
+
+.inquiry-label p{
+  font-weight: bold;
+  margin: 0;
+}
+
+.inquiry-name-form{
+  width: 50%;
+  padding: 5px;
+}
+
+.inquiry-text-form{
+  width: 50%;
+  height: 200px;
+  overflow: scroll;
+  padding: 5px;
+}
+
+.inquiry-send-btn{
+  color: #fff;
+  background-color: #053980;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}

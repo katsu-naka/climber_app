@@ -3,15 +3,12 @@
     <p>タスク詳細</p>
   </div>
 </div>
-
 <div class="show-task-field">
   <div class="container-fluid">
     <div class="show-task-contents row">
-    
       <%#タスク詳細%>
       <div class="col-xl-6">
         <div class="show-task-area col-10 offset-1 ">
-
           <div class="date-name-box row">
             <div class="show-date-box">
               <%= @task.date %>
@@ -35,17 +32,14 @@
           <div class="text-center">
             <%= link_to "タスクボードに戻る", root_path, class:"root-link"%>
           </div>
-
         </div>
       </div>
-
       <%#コメント%>
       <div class="col-xl-6">
         <div class="comments-area col-10 offset-1">
           <p>comment area</p>
         </div>
       </div>
-
     </div>
   </div>
 </div>
