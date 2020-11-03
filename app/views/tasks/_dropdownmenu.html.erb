@@ -1,0 +1,12 @@
+<div class="dropdown">
+  <button type="button" id="dropdown1"
+      class="btn"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false">
+    <%= image_tag "dropdown.png", alt: "dropdown-menu", class:"dropdown-icon" %>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdown1">
+    <%= link_to "不具合報告・お問い合わせ", new_inquiry_path ,class:"dropdown-item" %>
+  </div> 
+</div>
