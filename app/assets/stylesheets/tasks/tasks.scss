@@ -28,26 +28,39 @@ main{
 }
 
 // header1
-.header1-title{
+.task-board-name{
+  height: 100%;
   color: #fff;
   font-size: 18px;
   padding: 10px;
+  margin-left: 10px;
 }
 
-.sign-out-btn{
-  float: right;
+.project-select-box{
+  height: 100%;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: 20px;
+  background-color: #ff5757;
+}
+
+.project-select-btn{
   text-decoration: none;
-  color: #053980;
-  font-size: 12px;
-  background-color: #fff;
-  padding: 5px;
-  margin: 10px;
-  border-radius: 4px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
 }
 
 // header2
 .date-select{
+  height: 100%;
   padding: 10px;
+  margin-left: 10px;
+}
+
+.new-task-box{
+  height: 100%;
+  line-height: 50px;
 }
 
 .new-task-btn{
@@ -58,16 +71,25 @@ main{
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 5px;
-  margin-left: 10px;
 }
 
-.task-status{
+.task-status-box{
+  height: 100%;
+  line-height: 50px;
+}
+
+.task-status-box p{
   color: #fff;
   font-size: 18px;
 }
 
+.dropdown{
+  margin-left: auto;
+  margin-right: 10px;
+}
+
 .dropdown-icon{
-  width: 40px;
+  width: 30px;
 }
 
 // task-main

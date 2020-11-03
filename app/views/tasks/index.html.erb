@@ -1,83 +1,67 @@
 <%#ログインユーザーのタスク管理ページ%>
 <main>
+<% if user_signed_in? %>
+  <div class="container-fluid">
 
-  <% unless user_signed_in? %>
-    <%= render partial: 'infomation' %>
-  <% end %>
-
-  <% if user_signed_in? %>
-    <div class="container-fluid">
-
-    <%# header 1 %>
-      <div class="header-menu1 row">
-        <div class="header1-title col-3">
-          <P><%= current_user.name %>さんのタスクボード</p>
-        </div>
-
-        <%#テスト中！！！！！！！%>
-        <div class="header1-title col-3">
-          <P><%= link_to "プロジェクト選択",projects_path %></p>
-        </div>
-
-        <div class="sign-out-box col-6">
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class:"sign-out-btn" %>
-        </div>
+  <%# header 1 %>
+    <div class="header-menu1 row">
+      <div class="task-board-name">
+        <P><%= current_user.name %>さんのタスクボード</p>
       </div>
+      <div class="project-select-box">
+        <%= link_to "プロジェクト選択", projects_path, class:"project-select-btn" %>
+      </div>
+    </div>
 
-    <%# header2 %>
-      <div class="header-menu2 row">
-        <div class="date-select d-flex col-12">
-          <%= form_with model:@task, locals: true do |f| %> 
-          <div>
+  <%# header2 %>
+    <div class="header-menu2 row">
+      <div class="date-select">
+        <%= form_with model:@task, locals: true do |f| %> 
+        <div>
           <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
-          <%end%>
-          <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
-          </div>
-        
-          <div class="task-status ml-4 mt-1">
-          <p>タスク数：<%= @today_tasks %> 完了済：<%= @dones %> 進捗率：<%= @progress %>％</p>
-          </div>
-
-          <%= render partial:"dropdownmenu" %>
-
         </div>
+        <%end%>
       </div>
+      <div class="new-task-box ml-3">
+      <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
+      </div>
+      <div class="task-status-box ml-3">
+        <p>タスク数：<%= @today_tasks %> 完了済：<%= @dones %> 進捗率：<%= @progress %>％</p>
+      </div>
+      <%= render partial:"dropdownmenu" %>
+    </div>
 
-
-
-
-
-    <%# タスク表示画面 %>
-    <div class="task-field row">
-      <div class="task-lists col-sm-7 ml-auto mr-auto">
-        <% @tasks.each do |task|%>
-          <div class="task-list row mt-5 mb-5">
-            <div class="tasks-progress">
+  <%# タスク表示画面 %>
+  <div class="task-field row">
+    <div class="task-lists col-sm-7 ml-auto mr-auto">
+      <% @tasks.each do |task|%>
+        <div class="task-list row mt-5 mb-5">
+          <div class="tasks-progress">
+          </div>
+          <div class="task-title col-8">
+            <%= task.title %>
+          </div>
+          <div class="col-4 d-flex justify-content-around align-items-center">
+            <div class="show-link">
+              <%= link_to "詳細", task_path(task.id), class:"show-link" %>
             </div>
-            <div class="task-title col-8">
-              <%= task.title %>
+            <div class="delete-link">
+              <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
             </div>
-            <div class="col-4 d-flex justify-content-around align-items-center">
-              <div class="show-link">
-                <%= link_to "詳細", task_path(task.id), class:"show-link" %>
-              </div>
-              <div class="delete-link">
-                <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
-              </div>
-              <div class="done-link">
-                <% if task.done == 1 %>
-                  <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
-                <% end %>
-                <% if task.done != 1 %>
-                  <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
-                <% end %>
-              </div>
+            <div class="done-link">
+              <% if task.done == 1 %>
+                <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
+              <% else %>
+                <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
+              <% end %>
             </div>
           </div>
-        <%end%>
-      </div>  
-    </div>
-  <% end %>
-
+        </div>
+      <%end%>
+    </div>  
+  </div>
+<% else %>
+  <%= render partial: 'infomation' %>
+<% end %>
 </main>

@@ -1,43 +1,39 @@
+<%#各ユーザーのタスク管理ページ%>
 <main>
-
-  <% unless user_signed_in? %>
-    <%= render partial: 'infomation' %>
-  <% end %>
-
   <% if user_signed_in? %>
     <div class="container-fluid">
-    <%# header 1 %>
-      <div class="header-menu1 row">
-        <div class="header1-title col-3">
-          <P><%= @user.name %>さんのタスクボード</p>
-        </div>
 
-        <%#テスト中！！！！！！！%>
-        <div class="header1-title col-3">
-          <P><%= link_to "プロジェクト選択",projects_path %></p>
-        </div>
-
-        <div class="sign-out-box col-6">
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class:"sign-out-btn" %>
-        </div>
+  <%# header 1 %>
+    <div class="header-menu1 row">
+      <div class="task-board-name">
+        <P><%= @user.name %>さんのタスクボード</p>
       </div>
-    <%# header2 %>
-    <%= form_with model:@task, locals: true do |f| %> 
-      <div class="header-menu2 row">
-        <div class="date-select d-flex col-12">
-          <div>
+      <div class="project-select-box">
+        <%= link_to "プロジェクト選択", projects_path, class:"project-select-btn" %>
+      </div>
+    </div>
+
+  <%# header2 %>
+    <div class="header-menu2 row">
+      <div class="date-select">
+        <%= form_with model:@task, locals: true do |f| %> 
+        <div>
           <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
-          <% if current_user.id == @user.id %>
-          <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
-          <% end %>
-          </div>
-          <div class="task-status ml-4 mt-1">
-          <p>タスク数：<%= @today_tasks %> 完了済：<%= @dones %> 進捗率：<%= @progress %>％</p>
-          </div>
         </div>
+        <% end %>
       </div>
-    <%end%>
+      <% if current_user.id == @user.id %>
+        <div class="new-task-box ml-3">
+          <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
+        </div>
+      <% end %>
+      <div class="task-status-box ml-3">
+        <p>タスク数：<%= @today_tasks %> 完了済：<%= @dones %> 進捗率：<%= @progress %>％</p>
+      </div>
+      <%= render partial:"tasks/dropdownmenu" %>
+    </div>
+
     <%# タスク表示画面 %>
     <div class="task-field row">
       <div class="task-lists col-sm-7 ml-auto mr-auto">
@@ -50,32 +46,32 @@
               <div class="show-link">
                 <%= link_to "詳細", task_path(task.id), class:"show-link" %>
               </div>
-            <%# 自身のタスクのみ操作出来る%>
-            <% if current_user.id == task.user_id %>
-              <div class="delete-link">
-                <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
-              </div>
-              <div class="done-link">
-                <% if task.done == 1 %>
-                  <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
-                <% end %>
-                <% if task.done != 1 %>
-                  <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
-                <% end %>
-              </div>
-            <% else %>
-              <div class="done-link">
-                <% if task.done == 0 %>
-                  <p class="done0-btn link-btn">完了済</p>
-                <% end %>
-              </div>
-            <% end%>
-
+              <%# ユーザー条件により表示変更%>
+              <% if current_user.id == task.user_id %>
+                <div class="delete-link">
+                  <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
+                </div>
+                <div class="done-link">
+                  <% if task.done == 1 %>
+                    <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
+                  <% else %>
+                    <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
+                  <% end %>
+                </div>
+              <% else %>
+                <div class="done-link">
+                  <% if task.done == 0 %>
+                    <%= link_to "完了済", "#", class:"done0-btn link-btn" %>
+                  <% end %>
+                </div>
+              <% end%>
+              <%#ユーザー条件により表示変更%>
             </div>
           </div>
         <%end%>
       </div>  
     </div>
+  <% else %>
+    <%= render 'tasks/infomation' %>
   <% end %>
-
 </main>
