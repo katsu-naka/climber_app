@@ -1,22 +1,31 @@
-.infomation-main{
+.info-field{
   height: 100vh;
+  width: 100%;
+  overflow: scroll;
   background-image: image-url('entrance-background-image.png');
   background-size: cover;
   background-color: rgba(0,0,0,0.5);
   background-blend-mode: darken;
 }
 
-.info-area{
-  height: 100%;
+.info-contents{
+  height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .info-box{
-  margin-top: 200px;
+  margin: 150px auto 0;
+  width: 80%;
+}
+
+.info-app-logo{
+  width: 100%;
 }
 
 .app-concept{
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .app-description{
@@ -25,16 +34,21 @@
 }
 
 .account-box{
+  margin-top: 150px;
   text-align: center;
-  margin-top: 200px;
+  padding: 10px;
 }
 
 .account-box p{
   color: #fff;
   font-size: 15px;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 } 
+
+.sign-up-box{
+  height: 80px;
+  line-height: 80px;
+}
 
 .sign-up{
   background-color: #053980;
@@ -44,10 +58,16 @@
   border-radius: 5px;
 }
 
+.sns-acount-box{
+  height: 80px;
+  line-height: 80px;
+}
+
 .google-logo{
   width: 200px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
+
 .facebook-logo{
   width: 200px;
 }
