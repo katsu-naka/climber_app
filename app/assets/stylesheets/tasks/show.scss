@@ -1,6 +1,6 @@
 // ヘッダーのCSSはtasks.scssに記述
 
-.show-task-field{
+.show-task{
   height: 100vh;
   width: 100%;
   overflow: scroll;
@@ -10,10 +10,10 @@
   background-blend-mode: lighten;
 }
 
-.container-fluid{
+.show-task-field{
   padding-top: 90px;
   padding-bottom: 40px;
-
+  
 }
 
 .show-task-contents{
