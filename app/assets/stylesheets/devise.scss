@@ -1,0 +1,53 @@
+// 新規登録・ログイン共通
+.devise-field{
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  background-image: image-url('entrance-background-image.png');
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+}
+
+.devise-contents{
+  height: 100vh;
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+.devise-form-field{
+  background-color: #fff;
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.devise-form-field p{
+  color: #053980;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.field{
+  margin-top: 10px;
+}
+
+.actions{
+  margin: 30px;
+}
+
+.devise-form{
+  padding: 5px;
+  width: 50%;
+}
+
+.devise-submit-btn{
+  color: #fff;
+  border: none;
+  background-color: #053980;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

@@ -18,7 +18,7 @@
       <div class="date-select">
         <%= form_with model:@task, locals: true do |f| %> 
         <div>
-          <%= f.date_field "#", value: Time.now.strftime("%Y-%m-%d") %>
+          <%= f.date_field "#", placeholder: Time.now.strftime("%Y-%m-%d") %>
           <%= f.submit "表示" %>
         </div>
         <%end%>
