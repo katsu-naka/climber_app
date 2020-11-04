@@ -1,6 +1,6 @@
 // ヘッダーのCSSはtasks.scssに記述
 
-.show-task-field{
+.show-task{
   height: 100vh;
   width: 100%;
   overflow: scroll;
@@ -10,48 +10,58 @@
   background-blend-mode: lighten;
 }
 
-.show-task-contents{
-  height: 100vh;
+.show-task-field{
   padding-top: 90px;
   padding-bottom: 40px;
+  
+}
+
+.show-task-contents{
+  height: 100vh;
+  overflow: scroll;
 }
 
 .show-task-area{
-  height: 90%;
+  height: 80%;
   background-color: #fff;
   margin-top: 40px;
   border-radius: 10px;
   padding: 10px;
 }
 
-.date-name{
+//日付、ユーザー名、編集、削除
+.date-name-box{
+  height: 40px;
   border-bottom: 1px solid #ddd;
-  height: 50px;
 }
 
-.show-date{
-  float: left;
-  margin-right: 10px;
+.show-date-box{
   font-size: 18px;
   line-height: 40px;
+  margin-left: 20px;
 }
 
-.show-user-name{
+.show-name-box{
   font-size: 18px;
   line-height: 40px;
+  margin-left: 20px;
 }
 
-.edit-delete-link{
-  text-align: right;
-  margin: auto 0;;
+.edit-delete-box{
+  height: 100%;
+  line-height: 40px;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
+//delete-linkはtasks.scssに記述
 .edit-link{
   color: #053980;
   font-weight: bold;
   margin-right: 20px;
 }
 
+// タスクタイトル、詳細、ルートリンク
 .show-task-title{
   font-size: 20px;
   font-weight: bold;
@@ -67,7 +77,7 @@
 
 // コメント
 .comments-area{
-  height: 90%;
+  height: 80%;
   background-color: #ccc;
   opacity: 0.8;
   margin-top: 40px;

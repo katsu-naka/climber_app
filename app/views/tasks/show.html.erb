@@ -3,21 +3,21 @@
     <p>タスク詳細</p>
   </div>
 </div>
-
-<div class="show-task-field">
-  <div class="container-fluid">
+<div class="show-task">
+  <div class="show-task-field container-fluid">
     <div class="show-task-contents row">
-    
       <%#タスク詳細%>
-      <div class="col-xl-6">
+      <div class="col-lg-6">
         <div class="show-task-area col-10 offset-1 ">
-          <div class="date-name row">
-            <div class="col-6">
-              <p class="show-date"><%= @task.date %></p>
-              <p class="show-user-name"><%= @task.user.name %>さんのタスク</p>
+          <div class="date-name-box row">
+            <div class="show-date-box">
+              <%= @task.date %>
+            </div>
+            <div class="show-name-box">
+              <%= @task.user.name %>さんのタスク
             </div>
             <% if current_user.id == @task.user.id%>
-            <div class="edit-delete-link col-6">
+            <div class="edit-delete-box">
               <%= link_to "編集" , edit_task_path, class:"edit-link"%>
               <%= link_to "削除" , task_path(@task.id),method: :delete, class:"delete-link"%>
             </div>
@@ -29,18 +29,17 @@
           <div class="show-task-text">
             <p><%= @task.text%></p>
           </div>
-          <div class="mt-5">
+          <div class="text-center">
             <%= link_to "タスクボードに戻る", root_path, class:"root-link"%>
           </div>
         </div>
       </div>
       <%#コメント%>
-      <div class="col-xl-6">
+      <div class="col-lg-6">
         <div class="comments-area col-10 offset-1">
           <p>comment area</p>
         </div>
       </div>
-
     </div>
   </div>
 </div>

@@ -1,0 +1,33 @@
+//一部CSSはapp/assets/stylesheets/projects/projects.scssと共通
+
+.project-name-label{
+  font-weight: bold;
+  color: #053980;
+}
+
+.project-name-form{
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.member-select{
+  margin-top: 20px;
+}
+
+.member-select-form{
+  padding: 5px;
+}
+
+.new-project-submit{
+  margin-top: 20px;
+}
+
+.new-project-submit-btn{
+  background-color: #053980;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
