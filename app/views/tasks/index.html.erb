@@ -5,8 +5,9 @@
 
   <%# header 1 %>
     <div class="header-menu1 row">
-      <div class="task-board-name">
-        <P><%= current_user.name %>さんのタスクボード</p>
+      <div class="task-board-name d-flex">
+        <P class="mr-3"><%= current_user.name %>さんのタスクボード</p>
+        <p><%= @date.strftime("%Y年%m月%d日") %></p>
       </div>
       <div class="project-select-box">
         <%= link_to "プロジェクト選択", projects_path, class:"project-select-btn" %>
@@ -15,16 +16,14 @@
 
   <%# header2 %>
     <div class="header-menu2 row">
-      <div class="date-select">
-        <%= form_with model:@task, locals: true do |f| %> 
-        <div>
-          <%= f.date_field "#", placeholder: Time.now.strftime("%Y-%m-%d") %>
-          <%= f.submit "表示" %>
+      <%= form_with(model:@task, metod: :post,local: true) do |f| %> 
+        <div class="date-select">
+          <%= f.date_field :date, value:Date.today ,class:"date-select-form"%>
+          <%= f.submit "日付変更" ,class:"change_date_btn"%>
         </div>
-        <%end%>
-      </div>
+      <%end%>
       <div class="new-task-box ml-3">
-      <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
+        <%= link_to "新規タスク作成", new_task_path ,class:"new-task-btn"%>
       </div>
       <div class="task-status-box ml-3">
         <p>タスク数：<%= @today_tasks %> 完了済：<%= @dones %> 進捗率：<%= @progress %>％</p>
@@ -60,6 +59,7 @@
         </div>
       <%end%>
     </div>  
+
   </div>
 <% else %>
   <%= render partial: 'infomation' %>

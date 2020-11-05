@@ -11,7 +11,7 @@
         <div class="show-task-area col-10 offset-1 ">
           <div class="date-name-box row">
             <div class="show-date-box">
-              <%= @task.date %>
+              <%= @task.date.strftime("%Y年%m月%d日") %>
             </div>
             <div class="show-name-box">
               <%= @task.user.name %>さんのタスク
@@ -30,7 +30,7 @@
             <p><%= @task.text%></p>
           </div>
           <div class="text-center">
-            <%= link_to "タスクボードに戻る", root_path, class:"root-link"%>
+            <%= link_to "戻る", :back %>
           </div>
         </div>
       </div>

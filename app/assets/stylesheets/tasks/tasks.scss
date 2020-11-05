@@ -31,7 +31,7 @@ main{
 .task-board-name{
   height: 100%;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   padding: 10px;
   margin-left: 10px;
 }
@@ -53,14 +53,33 @@ main{
 
 // header2
 .date-select{
-  height: 100%;
-  padding: 10px;
-  margin-left: 10px;
+  height: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.date-select-form{
+  padding: 2px;
+  height: 34px;
+  border: none;
+  color: #999;
+}
+
+.change_date_btn{
+  height: 34px;
+  border: none;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #ddd;
+  padding: 8px;
 }
 
 .new-task-box{
   height: 100%;
-  line-height: 50px;
+  line-height: 46px;
 }
 
 .new-task-btn{
@@ -89,6 +108,7 @@ main{
 }
 
 .dropdown-icon{
+  margin-top: 3px;
   width: 30px;
 }
 
