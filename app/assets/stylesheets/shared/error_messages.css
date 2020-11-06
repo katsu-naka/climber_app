@@ -1,0 +1,17 @@
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  background-color: #ddd;
+  padding: 5px;
+  font-size: 15px;
+  list-style: none;
+  color: rgb(182, 48, 0);
+}
+
+.sign-up-errors{
+  color: rgb(182, 48, 0);
+}

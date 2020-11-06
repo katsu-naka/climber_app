@@ -4,8 +4,6 @@ class ProjectsController < ApplicationController
   def index
     @user = current_user
     @projects = Project.all.order("created_at DESC")
-      
-    # binding.pry
   end
 
   def new

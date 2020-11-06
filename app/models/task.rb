@@ -3,7 +3,7 @@ class Task < ApplicationRecord
   has_many :messages
 
   with_options presence: true do
-    validates :title
+    validates :title, length: { maximum: 40 , message: "40字以内で入力してください"}
     validates :date
     validates :done
   end

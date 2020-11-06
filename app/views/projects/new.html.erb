@@ -8,18 +8,21 @@
 <div class="project-index">
   <div class="project-field">
     <div class="project-lists">
-      <%= form_with model:@project, locals: true do |f| %>
+      <%= form_with model:@project, local: true do |f| %>
+        <%= render 'shared/error_messages',model: f.object %>
         <%= f.label :project_name,"プロジェクト名：",class:"project-name-label"%>
         <%= f.text_field :project_name , placeholder:"プロジェクト名を入力してください", class:"project-name-form"%>
+
         <div class="member-select">
           <select name="project[user_ids][]">
-          <option value="">プロジェクトメンバーを選択してください</option>
-          <% User.where.not(id:current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
+            <option value="">プロジェクトメンバーを選択してください</option>
+            <% User.where.not(id:current_user.id).each do |user| %>
+              <option value=<%= user.id %>><%= user.name %></option>
+            <% end %>
           </select >
           <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
         </div>
+
         <div class="new-project-submit">
         <%= f.submit "プロジェクト作成", class:"new-project-submit-btn"%>
         </div>

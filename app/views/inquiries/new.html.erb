@@ -10,7 +10,8 @@
       <p>※アプリ不具合、ご意見、各種お問い合わせは下記フォームより管理者へご連絡ください。<br>
       ※返信が必要な場合は返信用emailアドレスをご記入ください。返信まで時間を要する場合がございます。</p>
     </div>
-    <%= form_with model:@inquiry, locals: true do |f| %>
+    <%= form_with model:@inquiry, local: true do |f| %>
+    <%= render 'shared/error_messages',model: f.object %>
       <div class="inquiry-name-box">
         <div class="inquiry-label">
           <p><%= f.label :name, "お名前（フルネーム）"%>：</p>
