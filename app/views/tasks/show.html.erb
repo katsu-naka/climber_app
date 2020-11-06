@@ -37,7 +37,18 @@
       <%#コメント%>
       <div class="col-lg-6">
         <div class="comments-area col-10 offset-1">
-          <p>comment area</p>
+
+          <%= form_with(model:[@task, @message]) do |f| %>
+            <%= f.text_area :message %>
+            <%= f.submit '送信' %>
+          <% end %>
+
+          <div id='messages'>
+            <% @messages.reverse_each do |message| %>
+              <p><%= message.text %></p>
+            <% end %>
+          </div>
+
         </div>
       </div>
     </div>

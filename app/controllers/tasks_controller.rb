@@ -27,6 +27,8 @@ class TasksController < ApplicationController
   end
 
   def show
+    @message = Message.new
+    @messages = @task.messages.includes(:user)
   end
 
   def edit

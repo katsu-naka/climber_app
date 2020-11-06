@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
   root to: 'tasks#index'
   resources :tasks do
-    resources :messages, only: [:create]
+    resources :messages, only: [:new, :create]
     post 'done_update', to: 'tasks#done_update' 
     post 'done_remove', to: 'tasks#done_remove' 
   end
@@ -16,6 +16,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show] 
   post 'users/:id',to: 'users#show'
-  
+
   resources :inquiries, only: [:new, :create]
 end
