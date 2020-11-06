@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :projects , through: :project_users
   has_many :project_users
   has_many :sns_credentials
+  has_many :messages
 
 
   NAME_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/.freeze

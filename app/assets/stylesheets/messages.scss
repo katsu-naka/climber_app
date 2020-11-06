@@ -1,0 +1,39 @@
+.message-lists{
+  position: relative;
+  height: 70%;
+  padding: 10px;
+  overflow: scroll;
+  border-bottom: 1px solid #ddd;
+}
+
+.message-box{
+  color: #333;
+  background-color: #cceeff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message-box p{
+  white-space: pre-wrap;
+}
+
+.message-form{
+  text-align: center;
+}
+
+.message-text-form{
+  resize: none ;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  width: 80%;
+  padding: 5px;
+  height: 5rem;
+}
+
+
+.message-submit-btn{
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #053980;
+}
