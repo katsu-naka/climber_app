@@ -18,7 +18,7 @@
     <div class="header-menu2 row">
       <%= form_with(model:@task, metod: :post,local: true) do |f| %> 
         <div class="date-select">
-          <%= f.date_field :date, value:Date.today ,class:"date-select-form"%>
+          <%= f.date_field :date, value:@date ,class:"date-select-form"%>
           <%= f.submit "日付変更" ,class:"change_date_btn"%>
         </div>
       <%end%>
