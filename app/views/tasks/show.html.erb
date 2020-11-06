@@ -50,7 +50,7 @@
           <div class="message-form">
             <%= form_with(model:[@task, @message]) do |f| %>
               <div class="mt-2">
-                <%= f.text_area :message, placeholder:"メッセージを入力", class:"message-text-form" %>
+                <%= f.text_area :message, placeholder:"メッセージを入力", class:"message-text-form", id:"message-text" %>
               </div>
               <div class="mt-1">
                 <%= f.submit '送信', class:"message-submit-btn" %>

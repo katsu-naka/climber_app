@@ -3,7 +3,10 @@ class MessagesController < ApplicationController
   def create
     @task = Task.find(params[:task_id])
     message = Message.new(message_params)
-    message.save
+    user = message.user.name
+    if message.save
+      ActionCable.server.broadcast 'message_channel', content: message
+    end
   end
 
   private
