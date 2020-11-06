@@ -41,6 +41,7 @@
           <div class="message-lists" id='messages'>
             <% @messages.reverse_each do |message| %>
               <div class="message-box mb-3">
+                <p><%= message.user.name %>：<%= message.created_at.strftime('%Y年%m月%d日 %H時%M分') %></p>
                 <p><%= message.message %></p>
               </div>
             <% end %>
