@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @user = current_user
     @projects = Project.all.order("created_at DESC")
