@@ -63,14 +63,16 @@ Password: test0001
 ### ログイン／ログアウト
 - [http://climber-app.org](http://climber-app.org)へアクセスしてください。  
 - ユーザー認証を求められたら、上記に記載した認証IDとパスワードを入力してください。
-- ログイン
+- ログイン操作
 ![climber-info](https://user-images.githubusercontent.com/71310171/98444182-af2e9580-2153-11eb-916e-5232641dba30.jpg)
 ![sign-in_form](https://user-images.githubusercontent.com/71310171/98444186-b8b7fd80-2153-11eb-9d53-aeade882c9ef.jpg)
 ![sign-in_success](https://user-images.githubusercontent.com/71310171/98444191-be154800-2153-11eb-8107-4782aac9cd8b.jpg)
-- ログアウト
+- ログアウト操作
 ![sign-out](https://user-images.githubusercontent.com/71310171/98444193-c077a200-2153-11eb-9766-d8fa5afb9fc4.jpg)
 ### 新規タスクを作成する
-
+![new-task-top](https://user-images.githubusercontent.com/71310171/98444354-94105580-2154-11eb-87f7-1f8e0e4f6602.jpg)
+![new-task-form](https://user-images.githubusercontent.com/71310171/98444357-970b4600-2154-11eb-8fae-4c2f7dd87508.jpg)
+![new-task-success](https://user-images.githubusercontent.com/71310171/98444359-983c7300-2154-11eb-8b8b-8c8b5abc9d2f.jpg)
 ### トップページ（マイタスクボードの説明）
 
 ### タスクの編集と削除について
