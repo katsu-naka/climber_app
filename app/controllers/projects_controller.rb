@@ -21,6 +21,9 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    unless @project.users.pluck(:user_id).any?(current_user.id)
+      redirect_to root_path
+    end
   end
 
   private
