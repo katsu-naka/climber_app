@@ -26,6 +26,16 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    if @project.users.pluck(:user_id).any?(current_user.id)
+      @project.destroy
+      redirect_to action: :index
+    else
+      redirect_to root_path
+    end
+  end
+
   private
 
   def project_params

@@ -1,0 +1,23 @@
+// 一部CSSはapp/assets/stylesheets/projects/projects.scssと共通
+
+.project-name{
+  border-bottom: 1px solid #ddd;
+}
+
+.member-list{
+  font-size: 15px;
+}
+
+.member-list p{
+  font-size: 15px;
+  color: #333;
+}
+
+.project-delete{
+  text-decoration: none;
+  font-size: 12px;
+  color: red;
+  background-color: #eee;
+  padding: 10px 15px ;
+  border: 1px solid rgb(224, 137, 137);
+}
