@@ -36,38 +36,44 @@
     <%# タスク表示画面 %>
     <div class="task-field row">
       <div class="task-lists col-sm-7 ml-auto mr-auto">
-        <% @tasks.each do |task|%>
-          <div class="task-list row mt-5 mb-5">
-            <div class="task-title col-8">
-              <%= task.title %>
-            </div>
-            <div class="col-4 d-flex justify-content-around align-items-center">
-              <div class="show-link">
-                <%= link_to "詳細", task_path(task.id), class:"show-link" %>
+        <% if @tasks.blank? %>
+        <div class="tasks-blank-message text-center mt-5">
+          <p>本日のタスクは登録されていません</p>
+        </div>
+        <% else %>
+          <% @tasks.each do |task|%>
+            <div class="task-list row mt-5 mb-5">
+              <div class="task-title col-8">
+                <%= task.title %>
               </div>
-              <%# ユーザー条件により表示変更%>
-              <% if current_user.id == task.user_id %>
-                <div class="delete-link">
-                  <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
+              <div class="col-4 d-flex justify-content-around align-items-center">
+                <div class="show-link">
+                  <%= link_to "詳細", task_path(task.id), class:"show-link" %>
                 </div>
-                <div class="done-link">
-                  <% if task.done == 1 %>
-                    <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
-                  <% else %>
-                    <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
-                  <% end %>
-                </div>
-              <% else %>
-                <div class="done-link">
-                  <% if task.done == 0 %>
-                    <%= link_to "完了済", "#", class:"done0-btn link-btn" %>
-                  <% end %>
-                </div>
-              <% end%>
-              <%#ユーザー条件により表示変更%>
+                <%# ユーザー条件により表示変更%>
+                <% if current_user.id == task.user_id %>
+                  <div class="delete-link">
+                    <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
+                  </div>
+                  <div class="done-link">
+                    <% if task.done == 1 %>
+                      <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
+                    <% else %>
+                      <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
+                    <% end %>
+                  </div>
+                <% else %>
+                  <div class="done-link">
+                    <% if task.done == 0 %>
+                      <%= link_to "完了済", "#", class:"done0-btn link-btn" %>
+                    <% end %>
+                  </div>
+                <% end%>
+                <%#ユーザー条件により表示変更%>
+              </div>
             </div>
-          </div>
-        <%end%>
+          <%end%>
+        <% end %>
       </div>  
     </div>
   <% else %>

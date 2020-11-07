@@ -34,29 +34,34 @@
   <%# タスク表示画面 %>
   <div class="task-field row">
     <div class="task-lists col-sm-7 ml-auto mr-auto">
-      <% @tasks.each do |task|%>
-        <div class="task-list row mt-5 mb-5">
-          <div class="tasks-progress">
-          </div>
-          <div class="task-title col-8">
-            <%= task.title %>
-          </div>
-          <div class="col-4 d-flex justify-content-around align-items-center">
-            <div class="show-link">
-              <%= link_to "詳細", task_path(task.id), class:"show-link" %>
+      <% if @tasks.blank? %>
+      <div class="tasks-blank-message text-center mt-5">
+        <p>ようこそClimberへ！本日のタスクは登録されていません</p>
+        <%= link_to "こちらをクリックして新規タスクを追加しましょう！", new_task_path, class:"create-task-message"%>
+      </div>
+      <% else %>
+        <% @tasks.each do |task|%>
+          <div class="task-list row mt-5 mb-5">
+            <div class="task-title col-8">
+              <%= task.title %>
             </div>
-            <div class="delete-link">
-              <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
-            </div>
-            <div class="done-link">
-              <% if task.done == 1 %>
-                <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
-              <% else %>
-                <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
-              <% end %>
+            <div class="col-4 d-flex justify-content-around align-items-center">
+              <div class="show-link">
+                <%= link_to "詳細", task_path(task.id), class:"show-link" %>
+              </div>
+              <div class="delete-link">
+                <%= link_to "削除", task_path(task.id),method: :delete, class:"delete-link"%>
+              </div>
+              <div class="done-link">
+                <% if task.done == 1 %>
+                  <%= link_to "完了", task_done_update_path(task.id), method: :post ,class:"done1-btn link-btn"%>
+                <% else %>
+                  <%= link_to "完了済", task_done_remove_path(task.id),method: :post ,class:"done0-btn link-btn"%>
+                <% end %>
+              </div>
             </div>
           </div>
-        </div>
+        <%end%>
       <%end%>
     </div>  
   </div>

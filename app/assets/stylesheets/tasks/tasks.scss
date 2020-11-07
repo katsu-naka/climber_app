@@ -113,6 +113,26 @@ main{
 }
 
 // task-field
+.tasks-blank-message{
+  background-color: #eee;
+  opacity: 0.9;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+.tasks-blank-message p{
+  font-size: 26px;
+  font-weight: bold;
+  color: #053980;
+}
+
+.create-task-message{
+  text-decoration: none;
+  color: #ff5757;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .task-field{
   padding-top: 140px;
   padding-bottom: 40px;
