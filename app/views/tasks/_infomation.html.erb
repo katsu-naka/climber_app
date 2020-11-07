@@ -10,21 +10,25 @@
             <p>仲間と共に「高み」を目指す</p>
           </div>
           <div class="app-description ml-1 mt-4">
-            <p>Climberは、プロジェクトメンバーのタスク情報・進捗状況を共有<br>
-            あなたのビジネスをサポートします。</p>
+            <p>Climberは、ビジネスパートナーのタスク情報・進捗状況を共有<br>
+            あなたのビジネスをさらなる高みへ導きます。</p>
           </div>
         </div>
       </div>
       <%#新規登録%>
-      <div class="account-box col-lg-6">
-        <p>メールアドレスで新規新規登録する</p>
-        <div class="sign-up-box">
-          <%= link_to "新規登録", new_user_registration_path, class:"sign-up" %>
-        </div>
-        <p>-or-</p>
-        <p>SNSアカウントで新規新規登録する</p>
-        <div class="sns-acount-box">
-          <%= link_to image_tag("google-logo.png", class:"google-logo"), user_google_oauth2_omniauth_authorize_path, method: :post%>
+      <div class="account-box col-lg-6">  
+        <div class="sign-up-content">
+          <h3>Climberをはじめる</h3>
+          <p class="mt-5">メールアドレスで新規新規登録する</p>
+          <div class="sign-up-box">
+            <%= link_to "新規登録", new_user_registration_path, class:"sign-up" %>
+          </div>
+          <p>-or-</p>
+          <p>Googleアカウントで新規新規登録する</p>
+          <div class="sns-acount-box mb-3">
+            <%= link_to image_tag("google-logo.png", class:"google-logo"), user_google_oauth2_omniauth_authorize_path, method: :post%>
+          </div>
+          <%= link_to "既にアカウントをお持ちの方はこちらからログイン", new_user_session_path %>
         </div>
       </div>
     </div>
