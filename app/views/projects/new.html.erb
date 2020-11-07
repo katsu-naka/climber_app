@@ -1,7 +1,8 @@
 <%#CSSはapp/assets/stylesheets/projects/projects.scssと共通%>
 <div class="header-menu1">
-  <div class="header1-title col-3">
+  <div class="header1-title d-flex">
     <p>プロジェクト作成</p>
+    <div class="ml-5"><%= link_to "プロジェクトリストに戻る", projects_path , class:"back" %></div>
   </div>
 </div>
 <div class="project-index">
@@ -12,7 +13,6 @@
         <%= f.label :project_name,"プロジェクト名：",class:"project-name-label"%>
         <%= f.text_field :project_name , placeholder:"プロジェクト名を入力してください", class:"project-name-form"%>
         <div class="member-select">
-
           <select name="project[user_ids][]">
             <option value="">プロジェクトメンバーを選択してください</option>
             <% User.where.not(id:current_user.id).each do |user| %>
@@ -20,7 +20,6 @@
             <% end %>
           </select >
           <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
-          
         </div>
         <div class="new-project-submit">
         <%= f.submit "プロジェクト作成", class:"new-project-submit-btn"%>

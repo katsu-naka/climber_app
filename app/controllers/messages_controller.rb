@@ -4,7 +4,6 @@ class MessagesController < ApplicationController
   def create
     @task = Task.find(params[:task_id])
     message = Message.new(message_params)
-    user = message.user.name
     if message.save
       ActionCable.server.broadcast 'message_channel', content: message
     end
@@ -13,6 +12,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:message).merge(user_id: current_user.id, task_id: params[:task_id])
+    params.require(:message).permit(:message,:name,:datetime).merge(user_id: current_user.id, task_id: params[:task_id])
   end
 end

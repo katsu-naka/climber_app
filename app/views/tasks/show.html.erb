@@ -1,8 +1,10 @@
 <div class=header-menu1>
-  <div class="header1-title">
+  <div class="header1-title d-flex">
     <p>タスク詳細</p>
+    <div class="ml-5"><%= link_to "タスクボードに戻る", root_path , class:"back" %></div>
   </div>
 </div>
+
 <div class="show-task">
   <div class="show-task-field container-fluid">
     <div class="show-task-contents row">
@@ -29,38 +31,34 @@
           <div class="show-task-text">
             <p><%= @task.text%></p>
           </div>
-          <div class="text-center">
-            <%= link_to "戻る", root_path , date: @task.date %>
-          </div>
         </div>
       </div>
       <%#コメント%>
       <div class="col-lg-6">
         <div class="comments-area col-10 offset-1">
-
           <div class="message-lists" id='messages'>
             <% @messages.reverse_each do |message| %>
               <div class="message-box mb-3">
-                <p><%= message.user.name %>：<%= message.created_at.strftime('%Y年%m月%d日 %H時%M分') %></p>
+                <p><%= message.name %>：<%= message.datetime %></p>
                 <p><%= message.message %></p>
               </div>
             <% end %>
           </div>
-
           <div class="message-form">
             <%= form_with(model:[@task, @message]) do |f| %>
-              <div class="mt-2">
+              <div class="mt-3">
                 <%= f.text_area :message, placeholder:"メッセージを入力", class:"message-text-form", id:"message-text" %>
+                <%= f.hidden_field :name, :value => current_user.name %>
+                <%= f.hidden_field :datetime, :value => DateTime.now.strftime("%Y年%m月%d日 %H:%M:%S") %>
               </div>
               <div class="mt-1">
                 <%= f.submit '送信', class:"message-submit-btn" %>
               </div>
             <% end %>
           </div>
-
-
         </div>
       </div>
+      <%#コメント%>
     </div>
   </div>
 </div>

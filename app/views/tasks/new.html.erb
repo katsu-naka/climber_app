@@ -1,6 +1,7 @@
 <div class=header-menu1>
-  <div class="header1-title">
+  <div class="header1-title d-flex">
     <p>新規タスク作成</p>
+    <div class="ml-5"><%= link_to "タスクボードに戻る", root_path, class:"back"  %></div>
   </div>
 </div>
 <div class="new-task-field">
@@ -22,9 +23,6 @@
           <%= f.hidden_field :done ,:value => 1 %>
         <div class="mt-3">
           <%= f.submit "タスクを追加する" ,class:'new-submit-btn'%>
-        </div>
-        <div class="mt-5">
-          <%= link_to "タスクボードに戻る", root_path, class:"root-link"%>
         </div>
         <% end %>
       </div>

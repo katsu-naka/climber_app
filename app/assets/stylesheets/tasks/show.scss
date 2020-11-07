@@ -73,13 +73,5 @@
   width: 100%;
   overflow: scroll;
   word-wrap: break-word;
-}
-
-// コメント
-.comments-area{
-  height: 70%;
-  background-color: #fff;
-  margin-top: 40px;
-  border-radius: 10px;
-  padding: 10px;
+  white-space: pre-wrap;
 }

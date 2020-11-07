@@ -12,7 +12,7 @@ consumer.subscriptions.create("MessageChannel", {
   received(data) {
     const html =`
     <div class="message-box mb-3">
-    <p>${data.content.created_at}</p>
+    <p>${data.content.name}：${data.content.datetime}</p>
     <p>${data.content.message}</p>
     </div>
     `;
