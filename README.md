@@ -63,33 +63,47 @@ Password: test0001
 ### ログイン／ログアウト
 - [http://climber-app.org](http://climber-app.org)へアクセスしてください。  
 - ユーザー認証を求められたら、上記に記載した認証IDとパスワードを入力してください。
-- ログイン操作
+- ログイン
 ![climber-info](https://user-images.githubusercontent.com/71310171/98444182-af2e9580-2153-11eb-916e-5232641dba30.jpg)
 ![sign-in_form](https://user-images.githubusercontent.com/71310171/98444186-b8b7fd80-2153-11eb-9d53-aeade882c9ef.jpg)
 ![sign-in_success](https://user-images.githubusercontent.com/71310171/98444191-be154800-2153-11eb-8107-4782aac9cd8b.jpg)
-- ログアウト操作
+- ログアウト
 ![sign-out](https://user-images.githubusercontent.com/71310171/98444193-c077a200-2153-11eb-9766-d8fa5afb9fc4.jpg)
 ### 新規タスクを作成する
-- 新規タスク作成操作
+- 新規タスク作成
 ![new-task-top](https://user-images.githubusercontent.com/71310171/98444354-94105580-2154-11eb-87f7-1f8e0e4f6602.jpg)
 ![new-task-form](https://user-images.githubusercontent.com/71310171/98444357-970b4600-2154-11eb-8fae-4c2f7dd87508.jpg)
 ![new-task-success](https://user-images.githubusercontent.com/71310171/98444359-983c7300-2154-11eb-8b8b-8c8b5abc9d2f.jpg)
 ### タスク詳細確認と編集、削除機能
-- タスク詳細表示操作
+- タスク詳細表示
 ![show-top](https://user-images.githubusercontent.com/71310171/98444657-40067080-2156-11eb-9e56-7ad0ed5a3fb0.jpg)
 ![task-show](https://user-images.githubusercontent.com/71310171/98444665-4d235f80-2156-11eb-8afa-0483b5e0406a.jpg)
-- タスク編集操作
+- タスク編集
 ![edit](https://user-images.githubusercontent.com/71310171/98444672-5280aa00-2156-11eb-9a8f-dc91405e9d27.jpg)
 ![edit-success](https://user-images.githubusercontent.com/71310171/98444669-50b6e680-2156-11eb-9ef5-48af9270c3c5.jpg)
-### タスクボードその他の機能
-
+### タスクボードその他の表示・機能について
+- タスクボードその他の表示・機能
+![taskboard](https://user-images.githubusercontent.com/71310171/98444991-76dd8600-2158-11eb-868b-a1a127176100.jpg)
 ### プロジェクトを作成する
-
+- プロジェクト作成
+![project-top](https://user-images.githubusercontent.com/71310171/98445292-41d23300-215a-11eb-8d8f-2f7455ccd2d1.jpg)
+![project-new](https://user-images.githubusercontent.com/71310171/98445290-40086f80-215a-11eb-8eba-96dd73aac4bd.jpg)
+![project-form](https://user-images.githubusercontent.com/71310171/98445286-3b43bb80-215a-11eb-8e81-8d6ba32f309f.jpg)
+![project-success](https://user-images.githubusercontent.com/71310171/98445291-41399c80-215a-11eb-8065-cdca0c09b849.jpg)
 ### プロジェクトメンバーのタスクを閲覧する
-
+- 他ユーザーのタスクの閲覧
+![member-select](https://user-images.githubusercontent.com/71310171/98445727-95de1700-215c-11eb-800f-b16bc540a927.jpg)
+![member-task-borad](https://user-images.githubusercontent.com/71310171/98445731-9aa2cb00-215c-11eb-8980-d6946d72284f.jpg)
+![member-task-limit](https://user-images.githubusercontent.com/71310171/98445732-9bd3f800-215c-11eb-9b53-a990bb364c78.jpg)
 ### メッセージを送る
+- タスク詳細からメッセージを送信
+![message-top](https://user-images.githubusercontent.com/71310171/98446092-aa231380-215e-11eb-95d5-4228162712b3.jpg)
+![message-send](https://user-images.githubusercontent.com/71310171/98446089-a8f1e680-215e-11eb-8e42-78766c88652c.jpg)
+![message-success](https://user-images.githubusercontent.com/71310171/98446091-aa231380-215e-11eb-9e9d-e226f1c9a3d7.jpg)
 
 ### お問い合わせフォームについて
-
+- お問い合わせを送信
+![contact-top](https://user-images.githubusercontent.com/71310171/98446088-a7c0b980-215e-11eb-96cd-67946e3deb40.jpg)
+![contact-form](https://user-images.githubusercontent.com/71310171/98446086-a3949c00-215e-11eb-8af4-599d3da3a984.png)
 # テーブル設計
 ![climber-er-map](https://user-images.githubusercontent.com/71310171/98438581-8647d980-212e-11eb-9e69-0f28d6063d06.png)
