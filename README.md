@@ -85,7 +85,7 @@ Password: test0001
 ![edit](https://user-images.githubusercontent.com/71310171/98444672-5280aa00-2156-11eb-9a8f-dc91405e9d27.jpg)
 ![edit-success](https://user-images.githubusercontent.com/71310171/98444669-50b6e680-2156-11eb-9ef5-48af9270c3c5.jpg)
 ## タスクボードその他の表示・機能について
-[![Image from Gyazo](https://i.gyazo.com/7e31396962d292061b6141d58b5be9ad.gif)](https://gyazo.com/7e31396962d292061b6141d58b5be9ad)
+[![Image from Gyazo](https://i.gyazo.com/15444d00f7b5c34fee5045e4582dc2fd.gif)](https://gyazo.com/15444d00f7b5c34fee5045e4582dc2fd)
 - タスクボードその他の表示・機能
 ![taskboard](https://user-images.githubusercontent.com/71310171/98444991-76dd8600-2158-11eb-868b-a1a127176100.jpg)
 ## プロジェクトを作成する
