@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :user
-  has_many :messages
+  has_many :messages,dependent: :destroy
 
   with_options presence: true do
     validates :title

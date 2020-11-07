@@ -9,7 +9,7 @@
   <div class="container-fliud">
     <div class="row">
       <div class="new-task-form col-8 offset-2">
-        <%= form_with model:@task, locals: true do |f| %>
+        <%= form_with model:@task, local: true do |f| %>
           <div class="mt-5">
           <%= f.label :date,"日付を選択：", class:"date-form-label" %>
           <%= f.date_field :date, value: @task.date,class:"date-form" %>
@@ -19,6 +19,7 @@
         </div>
         <div>
           <%= f.text_area :text, placeholder: "本文", class:"text-form" %>
+          <%= render 'shared/error_messages',model: f.object %>
         </div>
           <%= f.hidden_field :done ,:value => 1 %>
         <div class="mt-3">

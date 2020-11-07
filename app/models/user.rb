@@ -4,11 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_many :tasks
-  has_many :projects , through: :project_users
-  has_many :project_users
-  has_many :sns_credentials
-  has_many :messages
+  has_many :tasks,dependent: :destroy
+  has_many :projects , through: :project_users,dependent: :destroy
+  has_many :project_users,dependent: :destroy
+  has_many :sns_credentials,dependent: :destroy
+  has_many :messages,dependent: :destroy
 
 
   NAME_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/.freeze
