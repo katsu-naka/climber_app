@@ -70,12 +70,18 @@ Password: test0001
 - ログアウト操作
 ![sign-out](https://user-images.githubusercontent.com/71310171/98444193-c077a200-2153-11eb-9766-d8fa5afb9fc4.jpg)
 ### 新規タスクを作成する
+- 新規タスク作成操作
 ![new-task-top](https://user-images.githubusercontent.com/71310171/98444354-94105580-2154-11eb-87f7-1f8e0e4f6602.jpg)
 ![new-task-form](https://user-images.githubusercontent.com/71310171/98444357-970b4600-2154-11eb-8fae-4c2f7dd87508.jpg)
 ![new-task-success](https://user-images.githubusercontent.com/71310171/98444359-983c7300-2154-11eb-8b8b-8c8b5abc9d2f.jpg)
-### トップページ（マイタスクボードの説明）
-
-### タスクの編集と削除について
+### タスク詳細確認と編集、削除機能
+- タスク詳細表示操作
+![show-top](https://user-images.githubusercontent.com/71310171/98444657-40067080-2156-11eb-9e56-7ad0ed5a3fb0.jpg)
+![task-show](https://user-images.githubusercontent.com/71310171/98444665-4d235f80-2156-11eb-8afa-0483b5e0406a.jpg)
+- タスク編集操作
+![edit](https://user-images.githubusercontent.com/71310171/98444672-5280aa00-2156-11eb-9a8f-dc91405e9d27.jpg)
+![edit-success](https://user-images.githubusercontent.com/71310171/98444669-50b6e680-2156-11eb-9ef5-48af9270c3c5.jpg)
+### タスクボードその他の機能
 
 ### プロジェクトを作成する
 
