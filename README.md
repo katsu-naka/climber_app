@@ -62,6 +62,8 @@ Password: test0002
 ※コメント機能などの操作確認にはテスト用ログインアカウント②でのタスク作成が必要です。
 
 # テーブル設計
+![climber-er-map](https://user-images.githubusercontent.com/71310171/98438581-8647d980-212e-11eb-9e69-0f28d6063d06.png)
+
 
 ## usersテーブル
 
