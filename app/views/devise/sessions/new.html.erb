@@ -25,6 +25,11 @@
         <div class="actions">
           <%= f.submit "ログイン", class:"devise-submit-btn"  %>
         </div>
+        <p>-or-</p>
+        <p>Googleアカウントでログインする</p>
+        <div class="sign-google mb-3">
+          <%= link_to image_tag("google-logo.png", class:"google-logo"), user_google_oauth2_omniauth_authorize_path, method: :post%>
+        </div>
       <% end %>
       <p>アカウントをお持ちでない方</p>
       <%= render "devise/shared/links" %>
