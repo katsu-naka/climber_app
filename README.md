@@ -63,10 +63,12 @@ Password: test0001
 ### ログイン／ログアウト
 - [http://climber-app.org](http://climber-app.org)へアクセスしてください。  
 - ユーザー認証を求められたら、上記に記載した認証IDとパスワードを入力してください。
-
 - ログイン
-![sign-in1](https://gyazo.com/a09bbfe7b52f68c06cb7f7ecaa2024ee)
-
+![climber-info](https://user-images.githubusercontent.com/71310171/98444182-af2e9580-2153-11eb-916e-5232641dba30.jpg)
+![sign-in_form](https://user-images.githubusercontent.com/71310171/98444186-b8b7fd80-2153-11eb-9d53-aeade882c9ef.jpg)
+![sign-in_success](https://user-images.githubusercontent.com/71310171/98444191-be154800-2153-11eb-8107-4782aac9cd8b.jpg)
+- ログアウト
+![sign-out](https://user-images.githubusercontent.com/71310171/98444193-c077a200-2153-11eb-9766-d8fa5afb9fc4.jpg)
 ### 新規タスクを作成する
 
 ### トップページ（マイタスクボードの説明）
