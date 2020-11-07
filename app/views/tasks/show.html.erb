@@ -33,11 +33,9 @@
           </div>
         </div>
       </div>
-
       <%#コメント%>
       <div class="col-lg-6">
         <div class="comments-area col-10 offset-1">
-
           <div class="message-lists" id='messages'>
             <% @messages.reverse_each do |message| %>
               <div class="message-box mb-3">
@@ -46,7 +44,6 @@
               </div>
             <% end %>
           </div>
-
           <div class="message-form">
             <%= form_with(model:[@task, @message]) do |f| %>
               <div class="mt-3">
@@ -59,7 +56,6 @@
               </div>
             <% end %>
           </div>
-
         </div>
       </div>
       <%#コメント%>
