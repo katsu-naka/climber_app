@@ -2,5 +2,9 @@ class Message < ApplicationRecord
   belongs_to :user
   belongs_to :task
 
-  validates :message, presence: true
+  with_options presence: true do
+    validates :message
+    validates :datetime
+    validates :name
+  end
 end
