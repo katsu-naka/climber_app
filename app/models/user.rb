@@ -16,6 +16,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :name, format: {with: NAME_REGEX, message: 'は全角で入力してください'}
   end
+  validates :email, uniqueness: { case_sensitive: false }
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
