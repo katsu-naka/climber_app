@@ -170,17 +170,40 @@
 ![climber-er-map](https://user-images.githubusercontent.com/71310171/98438581-8647d980-212e-11eb-9e69-0f28d6063d06.png)
 
 # ローカル開発環境での動作手順
-- クローン作業前に下記の動作環境がインストール済かご確認ください。
+- 動作環境について
+  - OS macOS Catalina 10.15.7
   - Ruby 2.6.5
   - Ruby on Rails 6.0.3.4
+  - yarn 1.22.5
   - git 2.74.3
   - mysql 5.6.50
 
-- 下記のコマンドを実行してアプリをクローンしてください。
+- 下記のコマンドをターミナルで実行してアプリをクローンしてください。
   - GitHubリポジトリのクローン
+  ```
+  % git clone https://github.com/katsu-naka/climber_app.git
+  ```
+  - ~/climber_appへ移動
+  ```
+  % cd climber_app
+  ```
   - Gemのインストール
-  - データベースの作成・テーブル定義の反映
+  ```
+  % bundle install
+  ```
+  - yarnのインストール
+  ```
+  % yarn install
+  ```
+  - データベースの作成
+  ```
+  % rails db:create
+  ```
+  - テーブル定義の反映
+  ```
+  % rails db:migrate
+  ```
   - アプリの起動
   ```
-  rails s
+  % rails s
   ```
