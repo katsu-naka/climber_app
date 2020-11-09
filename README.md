@@ -61,7 +61,6 @@
 ![edit](https://user-images.githubusercontent.com/71310171/98444672-5280aa00-2156-11eb-9a8f-dc91405e9d27.jpg)
 ![edit-success](https://user-images.githubusercontent.com/71310171/98444669-50b6e680-2156-11eb-9ef5-48af9270c3c5.jpg)
 ## タスクボードの日付変更・タスクステータスの切替
-[![Image from Gyazo](https://i.gyazo.com/15444d00f7b5c34fee5045e4582dc2fd.gif)](https://gyazo.com/15444d00f7b5c34fee5045e4582dc2fd)
 - タスクボードの日付変更・タスクステータスの切替・その他表示について
 ![taskboard](https://user-images.githubusercontent.com/71310171/98444991-76dd8600-2158-11eb-868b-a1a127176100.jpg)
 ## プロジェクトを作成する
@@ -84,7 +83,6 @@
 ![message-send](https://user-images.githubusercontent.com/71310171/98446089-a8f1e680-215e-11eb-8e42-78766c88652c.jpg)
 ![message-success](https://user-images.githubusercontent.com/71310171/98446091-aa231380-215e-11eb-9e9d-e226f1c9a3d7.jpg)
 ## お問い合わせフォームについて
-[![Image from Gyazo](https://i.gyazo.com/524f7d86ddd4629ab5ba38936043ef53.gif)](https://gyazo.com/524f7d86ddd4629ab5ba38936043ef53)
 - お問い合わせを送信
 ![contact-top](https://user-images.githubusercontent.com/71310171/98446088-a7c0b980-215e-11eb-96cd-67946e3deb40.jpg)
 ![contact-form](https://user-images.githubusercontent.com/71310171/98446086-a3949c00-215e-11eb-8af4-599d3da3a984.png)
