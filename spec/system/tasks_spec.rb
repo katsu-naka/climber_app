@@ -120,3 +120,59 @@ require 'rails_helper'
 #     end
 #   end
 # end
+
+# RSpec.describe 'タスク削除', type: :system do
+#   before do
+#     @task1 = FactoryBot.create(:task)
+#   end
+#   context 'タスクが削除が成功する' do
+#     it 'ログインしたユーザーはタスク一覧画面からタスクの削除ができる' do
+#       # タスクを投稿したユーザーでログインする
+#       visit new_user_session_path   
+#       fill_in 'メールアドレス', with: @task1.user.email
+#       fill_in 'パスワード', with: @task1.user.password
+#       find('input[name="commit"]').click
+#       expect(current_path).to eq root_path
+#       # タスクに削除ボタンがあることを確認する
+#       expect(page).to have_link("削除"), href: task_path(@task1)
+#       # タスクを削除するとレコード数が１減ることを確認する
+#       expect{
+#         find_link('削除', href: task_path(@task1)).click
+#       }.to change { Task.count }.by(-1)
+#       # # トップページに遷移する
+#       visit root_path
+#       # # トップページに削除したタスク内容が存在しないことを確認する
+#       expect(page).to have_no_content("#{@task1.title}")
+#     end
+#     it 'ログインしたユーザーはタスク詳細画面からタスクの削除ができる' do
+#       # タスクを投稿したユーザーでログインする
+#       visit new_user_session_path   
+#       fill_in 'メールアドレス', with: @task1.user.email
+#       fill_in 'パスワード', with: @task1.user.password
+#       find('input[name="commit"]').click
+#       expect(current_path).to eq root_path
+#       # タスク一覧のタスクに詳細ボタンがあることを確認する
+#       expect(page).to have_link("詳細"), href: task_path(@task1)
+#       # タスク詳細ページへ遷移する
+#       visit task_path(@task1)
+#       # タスク１詳細ページに削除ボタンがあることを確認する
+#       expect(page).to have_link("削除"), href: task_path(@task1)
+#       # タスクを削除するとレコード数が１減ることを確認する
+#       expect{
+#         find_link('削除', href: task_path(@task1)).click
+#       }.to change { Task.count }.by(-1)
+#       # トップページに遷移する
+#       visit root_path
+#       # トップページに削除したタスク内容が存在しないことを確認する
+#       expect(page).to have_no_content("#{@task1.title}")
+#     end
+#   end
+#   context 'タスクの削除ができない時' do
+#     it 'ログインしていないユーザーはタスクの削除ができない' do
+#       # トップページに遷移する
+#       visit root_path
+#       # 削除ボタンがないことを確認する
+#       expect(page).to have_no_link("削除"), href: task_path(@task1)
+#     end
+#   end
+# end
