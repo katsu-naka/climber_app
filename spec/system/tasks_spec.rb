@@ -13,7 +13,7 @@ RSpec.describe "タスク投稿", type: :system do
     fill_in 'メールアドレス', with: @user.email
     fill_in 'パスワード', with: @user.password
     find('input[name="commit"]').click
-    # # 新規タスク作成ページへのリンクがあることを確認する
+    # #新規タスク作成ページへのリンクがあることを確認する
     expect(page).to have_content('新規タスク作成')
     # 新規タスク作成ページへ遷移する
     visit new_task_path
