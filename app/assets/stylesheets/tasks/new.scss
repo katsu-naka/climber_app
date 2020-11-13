@@ -11,9 +11,9 @@
 }
 
 .new-task-form{
-  height: 100vh;
+  height: 100%;
   padding-top: 90px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   text-align: center;
 }
 
@@ -38,7 +38,7 @@
 
 .text-form{
   width: 500px;
-  height: 500px;
+  height: 300px;
   padding: 10px;
   overflow: scroll;
   border: none;
