@@ -38,8 +38,6 @@
 
 ## ログイン／ログアウト
 - [http://climber-app.org](http://climber-app.org)へアクセスしてください。  
-- ユーザー認証を求められたら、上記に記載した認証IDとパスワードを入力してください。
-[![Image from Gyazo](https://i.gyazo.com/0d3ca755ac4b4ef7a25ce33728530b04.gif)](https://gyazo.com/0d3ca755ac4b4ef7a25ce33728530b04)
 - ログイン
 ![climber-info](https://user-images.githubusercontent.com/71310171/98444182-af2e9580-2153-11eb-916e-5232641dba30.jpg)
 ![sign-in_form](https://user-images.githubusercontent.com/71310171/98444186-b8b7fd80-2153-11eb-9d53-aeade882c9ef.jpg)
@@ -53,7 +51,6 @@
 ![new-task-form](https://user-images.githubusercontent.com/71310171/98444357-970b4600-2154-11eb-8fae-4c2f7dd87508.jpg)
 ![new-task-success](https://user-images.githubusercontent.com/71310171/98444359-983c7300-2154-11eb-8b8b-8c8b5abc9d2f.jpg)
 ## タスク詳細確認と編集、削除機能
-[![Image from Gyazo](https://i.gyazo.com/640065d6bb87572200dd0a0b858a957f.gif)](https://gyazo.com/640065d6bb87572200dd0a0b858a957f)
 - タスク詳細表示
 ![show-top](https://user-images.githubusercontent.com/71310171/98444657-40067080-2156-11eb-9e56-7ad0ed5a3fb0.jpg)
 ![task-show](https://user-images.githubusercontent.com/71310171/98444665-4d235f80-2156-11eb-8afa-0483b5e0406a.jpg)
