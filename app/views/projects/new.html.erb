@@ -12,8 +12,12 @@
         <%= render 'shared/error_messages',model: f.object %>
         <%= f.label :project_name,"プロジェクト名：",class:"project-name-label"%>
         <%= f.text_field :project_name , placeholder:"プロジェクト名を入力してください", class:"project-name-form"%>
+        <div class="mt-5">
+        <label for="select" class="project-name-label">メンバーを選択してください：</label>
+        <p>Shift＋クリックで一括選択、Ctrl＋クリックで複数選択が可能です。</p>
+        </div>
         <div class="member-select">
-          <select name="project[user_ids][]">
+          <select name="project[user_ids][]" id="select" multiple size=10>
             <option value="">プロジェクトメンバーを選択してください</option>
             <% User.where.not(id:current_user.id).each do |user| %>
               <option value=<%= user.id %>><%= user.name %></option>
